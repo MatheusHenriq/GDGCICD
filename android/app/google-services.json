@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "484788321975",
+    "project_id": "gdg-phb",
+    "storage_bucket": "gdg-phb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484788321975:android:e02b2544cbb1b1a67ad732",
+        "android_client_info": {
+          "package_name": "com.example.cdgphbapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484788321975-fllmpdtqhhpaft98cv8bq96amqrs2vqc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANEKFnFJojW-cVthJRRPi9hMumzcODH8g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "484788321975-fllmpdtqhhpaft98cv8bq96amqrs2vqc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "484788321975-3bq4k9u4cpkvlhjj494qh8dpm45alcgs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cdgphbapp.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
