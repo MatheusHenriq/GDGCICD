@@ -33,7 +33,7 @@ jobs:
           cache: gradle
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: latest
+          flutter-version: "3.10.5"
           channel: 'stable'
           cache: true
       
