@@ -1,0 +1,12 @@
+io.flutter.plugins.urllauncher.url_launcher_android-jetified-window-java-1.0.0-beta04-0 /Users/matheushenrique/.gradle/caches/transforms-3/5a5a752a30ef8f927b89ee5d02868eb5/transformed/jetified-window-java-1.0.0-beta04/res
+io.flutter.plugins.urllauncher.url_launcher_android-jetified-window-1.0.0-beta04-1 /Users/matheushenrique/.gradle/caches/transforms-3/86a1a9f6804c8fc691a553244f0de821/transformed/jetified-window-1.0.0-beta04/res
+io.flutter.plugins.urllauncher.url_launcher_android-jetified-annotation-experimental-1.1.0-2 /Users/matheushenrique/.gradle/caches/transforms-3/9199ba66b232e9fc78c08871acc9a68c/transformed/jetified-annotation-experimental-1.1.0/res
+io.flutter.plugins.urllauncher.url_launcher_android-core-1.6.0-3 /Users/matheushenrique/.gradle/caches/transforms-3/9df09c476a8966dff0ab2c589910f62f/transformed/core-1.6.0/res
+io.flutter.plugins.urllauncher.url_launcher_android-main-4 /Users/matheushenrique/.pub-cache/hosted/pub.dev/url_launcher_android-6.0.37/android/src/main/res
+io.flutter.plugins.urllauncher.url_launcher_android-release-5 /Users/matheushenrique/.pub-cache/hosted/pub.dev/url_launcher_android-6.0.37/android/src/release/res
+io.flutter.plugins.urllauncher.url_launcher_android-pngs-6 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/url_launcher_android/generated/res/pngs/release
+io.flutter.plugins.urllauncher.url_launcher_android-resValues-7 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/url_launcher_android/generated/res/resValues/release
+io.flutter.plugins.urllauncher.url_launcher_android-rs-8 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/url_launcher_android/generated/res/rs/release
+io.flutter.plugins.urllauncher.url_launcher_android-mergeReleaseResources-9 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/url_launcher_android/intermediates/incremental/release/mergeReleaseResources/merged.dir
+io.flutter.plugins.urllauncher.url_launcher_android-mergeReleaseResources-10 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/url_launcher_android/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+io.flutter.plugins.urllauncher.url_launcher_android-merged_res-11 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/url_launcher_android/intermediates/merged_res/release

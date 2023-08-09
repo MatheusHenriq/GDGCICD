@@ -1,0 +1,40 @@
+<variant
+    name="release"
+    package="com.example.cdgphbapp"
+    minSdkVersion="16"
+    targetSdkVersion="33"
+    shrinking="true"
+    mergedManifest="/Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/intermediates/merged_manifest/release/AndroidManifest.xml"
+    proguardFiles="/Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/intermediates/default_proguard_files/global/proguard-android.txt-7.3.0:/Users/matheushenrique/src/flutter/packages/flutter_tools/gradle/flutter_proguard_rules.pro:proguard-rules.pro"
+    partialResultsDir="/Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/intermediates/lint_vital_partial_results/release/out"
+    desugaredMethodsFiles="/Users/matheushenrique/.gradle/caches/transforms-3/2c212e1cef7b880e3331d06d312d70fc/transformed/D8BackportedDesugaredMethods.txt">
+  <buildFeatures
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+    <sourceProvider
+        manifest="src/main/AndroidManifest.xml"
+        javaDirectories="src/main/java:src/main/kotlin"
+        resDirectories="src/main/res"
+        assetsDirectories="src/main/assets"/>
+    <sourceProvider
+        manifest="src/release/AndroidManifest.xml"
+        javaDirectories="src/release/java:src/release/kotlin"
+        resDirectories="src/release/res"
+        assetsDirectories="src/release/assets"/>
+  </sourceProviders>
+  <testSourceProviders>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <manifestPlaceholders>
+    <placeholder
+        name="applicationName"
+        value="android.app.Application" />
+  </manifestPlaceholders>
+  <mainArtifact
+      classOutputs="/Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/intermediates/javac/release/classes:/Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/tmp/kotlin-classes/release:/Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/kotlinToolingMetadata:/Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/intermediates/compile_and_runtime_not_namespaced_r_class_jar/release/R.jar"
+      applicationId="com.example.cdgphbapp"
+      generatedSourceFolders="/Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/generated/ap_generated_sources/release/out:/Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/generated/aidl_source_output_dir/release/out:/Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/generated/source/buildConfig/release:/Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/generated/renderscript_source_output_dir/release/out"
+      generatedResourceFolders="/Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/generated/res/google-services/release:/Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/generated/res/rs/release:/Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/generated/res/resValues/release">
+  </mainArtifact>
+</variant>

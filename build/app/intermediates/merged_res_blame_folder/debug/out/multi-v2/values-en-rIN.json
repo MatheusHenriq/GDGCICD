@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.cdgphbapp-mergeDebugResources-9:/values-en-rIN/values-en-rIN.xml",
+            "outputFile": "com.example.cdgphbapp-mergeDebugResources-12:/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
-                    "source": "/Users/matheushenrique/.gradle/caches/transforms-3/7e9df2ac2213a6bd3cef0f2f27870d79/transformed/core-1.6.0/res/values-en-rIN/values-en-rIN.xml",
+                    "source": "/Users/matheushenrique/.gradle/caches/transforms-3/9df09c476a8966dff0ab2c589910f62f/transformed/core-1.6.0/res/values-en-rIN/values-en-rIN.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
