@@ -7,53 +7,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  version:
-    name: Create version number
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install GitVersion
-        uses: gittools/actions/gitversion/setup@v0.9.7
-        with:
-          versionSpec: "5.x"
-      - name: Use GitVersion
-        id: gitversion
-        uses: gittools/actions/gitversion/execute@v0.9.7
-      - name: Create version.txt with nuGetVersion
-        run: echo ${{ steps.gitversion.outputs.nuGetVersion  }} > version.txt
-      - name: Upload version.txt
-        uses: actions/upload-artifact@v2
-        with:
-          name: gitversion
-          path: version.txt
+  
 
   build:
     name: Create Android Build
-    needs: version
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Get version.txt
-        uses: actions/download-artifact@v2
-        with:
-          name: gitversion
-      - name: Create new file without newline char from version.txt
-        run: tr -d '\n' < version.txt > version1.txt
-      - name: Read version
-        id: version
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: version1.txt
       - name: Download Android keystore
         id: android_keystore
         uses: timheuer/base64-to-file@v1.0.3
         with:
           fileName: upload-keystore.jks
-          encodedString: ${{ secrets.KEYSTORE_BASE64 }}
+          encodedString: ${{ secrets.KEY_BASE64 }}
       - name: Create key.properties
         run: |
           echo "storeFile=${{ steps.android_keystore.outputs.filePath }}" > android/key.properties
-          echo "storePassword=${{ secrets.STORE_PASSWORD }}" >> android/key.properties
+          echo "storePassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
           echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
           echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
       - uses: actions/setup-java@v3
@@ -63,7 +33,7 @@ jobs:
           cache: gradle
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.0.0"
+          flutter-version: latest
           channel: 'stable'
           cache: true
       
@@ -89,11 +59,13 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: android-release
-    - name: Release Build to internal track
-      uses: r0adkll/upload-google-play@v1
-      with:
-        serviceAccountJsonPlainText: ${{ secrets.PLAYSTORE_ACCOUNT_KEY }}
-        packageName: <YOUR_PACKAGE_NAME>
-        releaseFiles: app-release.aab
-        track: alpha
-        status: completed
+    - name: install firebase
+      run: | 
+        npm install firebase-tools -g
+    - name: distribute app
+      run: | 
+        "firebase appdistribution:distribute app-release.apk \
+        --app ${{ secrets.FIREBASE_ANDROID_ID }} \
+        --release-notes "Hello GDG" \
+        --groups "gdg-users" \
+        --token ${{ secrets.FIREBASE_TOKEN }} "
