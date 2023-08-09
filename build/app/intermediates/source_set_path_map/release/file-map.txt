@@ -1,0 +1,17 @@
+com.example.cdgphbapp-jetified-play-services-basement-18.1.0-0 /Users/matheushenrique/.gradle/caches/transforms-3/006bbe5a907188cb8f989af846bf78a4/transformed/jetified-play-services-basement-18.1.0/res
+com.example.cdgphbapp-jetified-window-java-1.0.0-beta04-1 /Users/matheushenrique/.gradle/caches/transforms-3/5a5a752a30ef8f927b89ee5d02868eb5/transformed/jetified-window-java-1.0.0-beta04/res
+com.example.cdgphbapp-jetified-firebase-common-20.3.3-2 /Users/matheushenrique/.gradle/caches/transforms-3/7b0bedee7051420cb6e57373566adbb4/transformed/jetified-firebase-common-20.3.3/res
+com.example.cdgphbapp-jetified-window-1.0.0-beta04-3 /Users/matheushenrique/.gradle/caches/transforms-3/86a1a9f6804c8fc691a553244f0de821/transformed/jetified-window-1.0.0-beta04/res
+com.example.cdgphbapp-jetified-annotation-experimental-1.1.0-4 /Users/matheushenrique/.gradle/caches/transforms-3/9199ba66b232e9fc78c08871acc9a68c/transformed/jetified-annotation-experimental-1.1.0/res
+com.example.cdgphbapp-core-1.6.0-5 /Users/matheushenrique/.gradle/caches/transforms-3/9df09c476a8966dff0ab2c589910f62f/transformed/core-1.6.0/res
+com.example.cdgphbapp-main-6 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/android/app/src/main/res
+com.example.cdgphbapp-release-7 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/android/app/src/release/res
+com.example.cdgphbapp-google-services-8 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/generated/res/google-services/release
+com.example.cdgphbapp-pngs-9 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/generated/res/pngs/release
+com.example.cdgphbapp-resValues-10 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/generated/res/resValues/release
+com.example.cdgphbapp-rs-11 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/generated/res/rs/release
+com.example.cdgphbapp-mergeReleaseResources-12 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.example.cdgphbapp-mergeReleaseResources-13 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.example.cdgphbapp-merged_res-14 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/app/intermediates/merged_res/release
+com.example.cdgphbapp-packaged_res-15 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/firebase_core/intermediates/packaged_res/release
+com.example.cdgphbapp-packaged_res-16 /Users/matheushenrique/Documents/personal/cdgphb/GDGCICD/build/url_launcher_android/intermediates/packaged_res/release
