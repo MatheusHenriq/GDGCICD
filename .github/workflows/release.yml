@@ -18,7 +18,7 @@ jobs:
         id: android_keystore
         uses: timheuer/base64-to-file@v1.0.3
         with:
-          fileName: upload-keystore.jks
+          fileName: gdg-keystore.jks
           encodedString: ${{ secrets.KEY_BASE64 }}
       - name: Create key.properties
         run: |
@@ -37,12 +37,16 @@ jobs:
           channel: 'stable'
           cache: true
       
+      
+      - name: Get dependencies
+        run: flutter clean
+        
       - name: Get dependencies
         run: flutter pub get
       
       - name: Start Android Release Build
         run: flutter build apk --release
-
+      
       - name: Upload Android Release
         uses: actions/upload-artifact@v2
         with:
@@ -64,8 +68,8 @@ jobs:
         npm install firebase-tools -g
     - name: distribute app
       run: | 
-        "firebase appdistribution:distribute app-release.apk \
-        --app ${{ secrets.FIREBASE_ANDROID_ID }} \
+        firebase appdistribution:distribute app-release.apk \
+        --app "${{ secrets.FIREBASE_ANDROID_ID }}" \
         --release-notes "Hello GDG" \
         --groups "gdg-users" \
-        --token ${{ secrets.FIREBASE_TOKEN }} "
+        --token "${{ secrets.FIREBASE_TOKEN }}"
