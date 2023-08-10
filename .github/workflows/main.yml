@@ -6,7 +6,7 @@ on:
   
 jobs:
   ci:
-    name: CI
+    name:  Continuos Integration
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -53,8 +53,27 @@ jobs:
           path: build/app/outputs/flutter-apk/app-release.apk
           
           
-        
-        
+  cd:
+      name: Continuos Delivery
+      needs: ci
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v1
+      - name: Get Android Build from artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: android-release
+      - name: install firebase
+        run: | 
+          npm install firebase-tools -g
+      - name: distribute app
+        run: | 
+          firebase appdistribution:distribute app-release.apk \
+          --app "${{ secrets.FIREBASE_ANDROID_ID }}" \
+          --release-notes "Hello GDG" \
+          --groups "gdg-users" \
+          --token "${{ secrets.FIREBASE_TOKEN }}"
+
         
  
       
