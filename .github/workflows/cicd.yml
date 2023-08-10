@@ -1,0 +1,61 @@
+name: CI/CD
+
+on:
+  push:
+    branches: ["develop"]
+
+jobs:
+  ci:
+    name:  Continuos Integration
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Download KeyStore
+        id: android_keystore
+        uses: timheuer/base64-to-file@v1.0.3
+        with:
+          fileName: gdg-keystore.jks
+          encodedString: ${{ secrets.KEY_BASE64 }}
+      - name: Create key.properties
+        run: |
+          echo "storeFile=${{ steps.android_keystore.outputs.filePath }}" > android/key.properties
+          echo "storePassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
+          echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
+          echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.propert 
+          
+      - name: Setup Java JDK
+      - uses: actions/setup-java@v3.12.0
+        with:
+          java-version: "11.x"
+          distribution: "zulu"
+          cache: true
+      - name: Flutter action
+  
+      - uses: subosito/flutter-action@v2.10.0
+        with:
+          flutter-version: "3.10.5"
+          channel: stable
+          cache: true
+          
+      - name: Clean Dependencies
+        run: flutter clean
+        
+      - name: Get Dependencies
+        run: flutter pub get
+        
+      - name: Flutter tests
+        run: flutter test
+        
+      - name: Flutter build
+        run: flutter build apk --release
+        
+      - name: Upload APK
+        uses: actions/upload-artifact@v2
+        with:
+          name: android-release
+          path: build/app/outputs/flutter-apk/app-release.apk 
+        
+        
+        
+       
+ 
