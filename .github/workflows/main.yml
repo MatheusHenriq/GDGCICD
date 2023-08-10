@@ -3,7 +3,6 @@ name: CICD
 on:
   push:
     branches: ["develop"]
-  workflow_dispatch:
   
 jobs:
   ci:
