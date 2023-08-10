@@ -1,16 +1,15 @@
-name: CI/CD
+name: CICD
 
 on:
   push:
     branches: ["develop"]
-
 jobs:
   ci:
     name:  Continuos Integration
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Download KeyStore
+      - name: Download Android key
         id: android_keystore
         uses: timheuer/base64-to-file@v1.0.3
         with:
@@ -21,41 +20,33 @@ jobs:
           echo "storeFile=${{ steps.android_keystore.outputs.filePath }}" > android/key.properties
           echo "storePassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
           echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
-          echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.propert 
-          
-      - name: Setup Java JDK
-      - uses: actions/setup-java@v3.12.0
+          echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
+      
+      - uses: actions/setup-java@v3
         with:
+          distribution: 'zulu'
           java-version: "11.x"
-          distribution: "zulu"
-          cache: true
-      - name: Flutter action
-  
-      - uses: subosito/flutter-action@v2.10.0
+          cache: gradle
+      - uses: subosito/flutter-action@v2
         with:
           flutter-version: "3.10.5"
-          channel: stable
+          channel: 'stable'
           cache: true
           
-      - name: Clean Dependencies
-        run: flutter clean
+      - name: Get dependencies
+        run: flutter clean   
         
-      - name: Get Dependencies
+      - name: Get dependencies
         run: flutter pub get
-        
+      
       - name: Flutter tests
         run: flutter test
         
-      - name: Flutter build
-        run: flutter build apk --release
+      - name: Flutter build apk for app dist
+        run: flutter build apk --release --build-number=${{ github.run_number }}
         
       - name: Upload APK
         uses: actions/upload-artifact@v2
         with:
           name: android-release
-          path: build/app/outputs/flutter-apk/app-release.apk 
-        
-        
-        
-       
- 
+          path: build/app/outputs/flutter-apk/app-release.apk
