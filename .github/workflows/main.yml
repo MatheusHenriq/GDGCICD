@@ -34,6 +34,9 @@ jobs:
           flutter-version: "3.10.5"
           channel: 'stable'
           cache: true
+          
+      - name: Get dependencies
+        run: flutter clean   
         
       - name: Get dependencies
         run: flutter pub get
