@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.example.cdgphbapp"
-4    android:versionCode="1"
-5    android:versionName="1.0.0" >
+4    android:versionCode="2"
+5    android:versionName="1.0.1" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
@@ -46,7 +46,7 @@
 32-->[androidx.core:core:1.6.0] /Users/matheushenrique/.gradle/caches/transforms-3/9df09c476a8966dff0ab2c589910f62f/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
 33        android:debuggable="true"
 34        android:icon="@mipmap/ic_launcher"
-35        android:label="cdgphbapp" >
+35        android:label="GDG PHB CICD" >
 36        <activity
 37            android:name="com.example.cdgphbapp.MainActivity"
 38            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

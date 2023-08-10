@@ -11,7 +11,7 @@
             </intent>
         </queries>
     <application
-        android:label="cdgphbapp"
+        android:label="GDG PHB CICD"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         
