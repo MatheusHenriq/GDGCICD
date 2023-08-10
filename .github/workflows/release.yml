@@ -75,7 +75,7 @@ jobs:
           path: build/app/outputs/flutter-apk/app-release.apk
 
   cd:
-    name: cd
+    name: Continuous Delivery
     needs: build
     runs-on: ubuntu-latest
     steps:
